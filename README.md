@@ -1,0 +1,631 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skilloraz — cutting-edge AI marketing & advertising software. Automate campaigns, predict ROAS, unify cross-channel data.">
+    <meta name="keywords" content="AI marketing software, advertising intelligence, campaign automation, predictive ROAS, performance marketing">
+    <title>Skilloraz | AI-First Marketing & Advertising Software</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #FFFFFF;
+            color: #0A0A0A;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid #E5E5E5;
+            padding: 20px 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0A0A0A;
+        }
+
+        .logo span {
+            background: #0A0A0A;
+            color: #FFFFFF;
+            padding: 0 6px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #525252;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #0A0A0A;
+        }
+
+        .nav-btn {
+            border: 1.5px solid #0A0A0A;
+            padding: 8px 20px;
+            border-radius: 40px;
+            color: #0A0A0A !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: #FFFFFF;
+        }
+
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-badge {
+            background: #0A0A0A;
+            color: #FFFFFF;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #0A0A0A;
+        }
+
+        .hero-highlight {
+            background: #0A0A0A;
+            color: #FFFFFF;
+            display: inline-block;
+            padding: 0 8px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #525252;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #0A0A0A;
+            color: #FFFFFF;
+            padding: 14px 36px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #2A2A2A;
+        }
+
+        .btn-outline {
+            border: 2px solid #0A0A0A;
+            color: #0A0A0A;
+            padding: 12px 34px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: #0A0A0A;
+            color: #FFFFFF;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            color: #525252;
+            font-size: 0.85rem;
+        }
+
+        .hero-visual {
+            flex: 1;
+            background: #F5F5F5;
+            border-radius: 32px;
+            padding: 40px;
+            border: 1px solid #E5E5E5;
+        }
+
+        .metric-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 24px;
+        }
+
+        .metric-item {
+            margin: 20px 0;
+        }
+
+        .metric-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .bar-bg {
+            height: 8px;
+            background: #E5E5E5;
+            border-radius: 20px;
+        }
+
+        .bar-fill {
+            height: 8px;
+            background: #0A0A0A;
+            border-radius: 20px;
+            width: 0%;
+        }
+
+        /* Trusted Section */
+        .trusted {
+            padding: 60px 0;
+            background: #FAFAFA;
+            text-align: center;
+            border-top: 1px solid #E5E5E5;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .trusted h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #525252;
+            margin-bottom: 32px;
+        }
+
+        .logo-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 48px;
+        }
+
+        .logo-item {
+            font-weight: 700;
+            color: #8A8A8A;
+            font-size: 1.1rem;
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            color: #525252;
+        }
+
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .service-card {
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            border-radius: 28px;
+            padding: 32px;
+            flex: 1 1 250px;
+            transition: 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #0A0A0A;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #525252;
+        }
+
+        /* Case Study */
+        .case-study {
+            background: #0A0A0A;
+            color: #FFFFFF;
+            padding: 80px 0;
+        }
+
+        .case-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .case-content {
+            flex: 1;
+        }
+
+        .case-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .stat-big {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 20px 0 8px;
+        }
+
+        .case-quote {
+            border-left: 3px solid #FFFFFF;
+            padding-left: 24px;
+            margin: 32px 0;
+        }
+
+        .case-graphic {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 32px;
+            padding: 48px 24px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .growth-number {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: #FAFAFA;
+            text-align: center;
+        }
+
+        .cta-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 48px;
+            padding: 56px 48px;
+            border: 1px solid #E5E5E5;
+        }
+
+        .cta-card h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-card p {
+            color: #525252;
+            margin-bottom: 32px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0A0A0A;
+            color: #A3A3A3;
+            padding: 56px 0 32px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo-footer {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            max-width: 260px;
+        }
+
+        .footer-links h4 {
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #A3A3A3;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: #FFFFFF;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-stats {
+                gap: 24px;
+            }
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            .cta-card {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo">SKILL<span>ORAZ</span></a>
+        <div class="nav-links">
+            <a href="#">Platform</a>
+            <a href="#">Solutions</a>
+            <a href="#">Customers</a>
+            <a href="#">Resources</a>
+            <a href="#" class="nav-btn">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <div class="hero-badge">🔥 CUTTING-EDGE MARKETING SOFTWARE</div>
+            <h1>Skilloraz — <span class="hero-highlight">AI-First</span><br>Marketing & Advertising Intelligence</h1>
+            <p>Automate campaigns, predict ROAS, unify cross-channel data — the only software suite built for hypergrowth.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">🚀 Start Free Trial</a>
+                <a href="#" class="btn-outline">Watch Demo →</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item"><h3>+324%</h3><p>Avg ROAS increase</p></div>
+                <div class="stat-item"><h3>150+</h3><p>Enterprise clients</p></div>
+                <div class="stat-item"><h3>24/7</h3><p>AI optimization</p></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="metric-card">
+                <p style="font-weight: 700; margin-bottom: 16px;">📊 Performance Dashboard</p>
+                <div class="metric-item">
+                    <div class="metric-label"><span>Conversion Rate</span><span>+142%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 74%"></div></div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label"><span>Ad Efficiency</span><span>-33% CPA</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 68%"></div></div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label"><span>Organic Reach</span><span>+189%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 89%"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trusted">
+    <div class="container">
+        <h3>TRUSTED BY INDUSTRY LEADERS</h3>
+        <div class="logo-cloud">
+            <span class="logo-item">▲ VELOCITY</span>
+            <span class="logo-item">LUNA & CO</span>
+            <span class="logo-item">ARK FINANCE</span>
+            <span class="logo-item">BEACON TECH</span>
+            <span class="logo-item">NEXUS</span>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Marketing that <span style="background: #0A0A0A; color: white; padding: 0 8px;">hits different</span></h2>
+            <p>AI-powered tools that turn attention into measurable growth</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Hypergrowth Ads</h3>
+                <p>AI-driven media buying on Meta, Google, TikTok with predictive ROAS</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>SEO Authority</h3>
+                <p>Intent-driven content strategies that dominate search rankings</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Creative Intelligence</h3>
+                <p>AI analyzes ad creatives to eliminate fatigue and boost CTR</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h3>Cross-Channel Hub</h3>
+                <p>Unify 20+ platforms in one dashboard with real-time sync</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="case-study">
+    <div class="container case-flex">
+        <div class="case-content">
+            <div class="hero-badge" style="background: white; color: black;">🏆 WINNING CASE</div>
+            <h2>+324% revenue surge for a DTC brand</h2>
+            <div class="stat-big">+324%</div>
+            <p>Year-over-year revenue lift in just 6 months using hyper-personalized funnels</p>
+            <div class="case-quote">
+                "Skilloraz redefined our entire acquisition model. They don't just deliver reports — they deliver market share."
+                <div style="margin-top: 10px; font-weight: 500;">— CMO, Luminate Beauty</div>
+            </div>
+            <a href="#" style="color: white; font-weight: 600;">Read full story →</a>
+        </div>
+        <div class="case-graphic">
+            <div class="growth-number">📊 +3.24x ROAS</div>
+            <div style="margin: 24px 0; height: 6px; background: rgba(255,255,255,0.2); border-radius: 8px;">
+                <div style="width: 85%; height: 6px; background: white; border-radius: 8px;"></div>
+            </div>
+            <p>$2.1M → $9.8M in 12 months</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <div class="cta-card">
+            <h2>Ready to build your <span style="background: #0A0A0A; color: white; padding: 0 8px;">unfair advantage</span>?</h2>
+            <p>Stop competing on price. Start dominating with AI-powered marketing intelligence.</p>
+            <a href="#" class="btn-primary" style="padding: 14px 38px;">Book a discovery call →</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo-footer">SKILL<span style="color: #0A0A0A; background: white; padding: 0 4px;">ORAZ</span></a>
+                <p>AI-first marketing & advertising software for hypergrowth brands.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Product</h4>
+                <a href="#">Platform</a>
+                <a href="#">Pricing</a>
+                <a href="#">Integrations</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <a href="#">hello@skilloraz.com</a>
+                <a href="#">+1 (800) 899-2345</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Skilloraz — Cutting-Edge Marketing & Advertising Software. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple animation for bars
+    setTimeout(function() {
+        var bars = document.querySelectorAll('.bar-fill');
+        bars.forEach(function(bar) {
+            var width = bar.style.width;
+            if (width) {
+                bar.style.width = '0%';
+                setTimeout(function() {
+                    bar.style.width = width;
+                    bar.style.transition = 'width 0.8s ease';
+                }, 100);
+            }
+        });
+    }, 200);
+</script>
+
+</body>
+</html>
